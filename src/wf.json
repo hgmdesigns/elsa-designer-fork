@@ -1,0 +1,30 @@
+WORKFLOW_ACTIVITIES = [
+    {
+       "type":"action",
+       "displayName":"Add the contact into a list Action",
+       "description":"The contact will be added into a selected list when this action is triggered.",
+       "category":"Actions",
+       "traits":1,
+       "outcomes":[
+          "Done"
+       ],
+       "inputProperties":[
+          {
+             "name":"List",
+             "type":"Elsa.Activities.ControlFlow.Join+JoinMode",
+             "uiHint":"dropdown",
+             "label":"List Id",
+             "hint": "Select a list id.",
+             "options": [
+               "[1] My list",
+               "[2] My List w",
+               "[3] My list"
+             ],
+             "order":0.0,
+             "supportedSyntaxes":	[ "Literal", "JavaScript", "Liquid" ]
+          }
+       ],
+       "outputProperties": [],
+      
+    }
+ ]
