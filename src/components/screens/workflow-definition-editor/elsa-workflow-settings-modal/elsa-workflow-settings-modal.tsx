@@ -74,7 +74,7 @@ export class ElsaWorkflowDefinitionSettingsModal {
 
   render() {
 
-    const tabs = ['Settings', 'Variables', 'Workflow Context'];
+    const tabs = ['Settings'];
     const selectedTab = this.selectedTab;
     const inactiveClass = 'elsa-border-transparent elsa-text-gray-500 hover:elsa-text-gray-700 hover:elsa-border-gray-300';
     const selectedClass = 'elsa-border-blue-500 elsa-text-blue-600';
@@ -157,11 +157,11 @@ export class ElsaWorkflowDefinitionSettingsModal {
       <div class="elsa-flex elsa-px-8">
         <div class="elsa-space-y-8 elsa-w-full">
           {textInput(formContext, 'name', 'Name', workflowDefinition.name, 'The technical name of the workflow.', 'workflowName')}
-          {textInput(formContext, 'displayName', 'Display Name', workflowDefinition.displayName, 'A user-friendly display name of the workflow.', 'workflowDisplayName')}
+          {/* {textInput(formContext, 'displayName', 'Display Name', workflowDefinition.displayName, 'A user-friendly display name of the workflow.', 'workflowDisplayName')} */}
           {textArea(formContext, 'description', 'Description', workflowDefinition.description, null, 'workflowDescription')}
-          {textInput(formContext, 'tag', 'Tag', workflowDefinition.tag, 'Tags can be used to query workflow definitions with.', 'tag')}
-          {selectField(formContext, 'persistenceBehavior', 'Persistence Behavior', workflowDefinition.persistenceBehavior, persistenceBehaviorOptions, 'The persistence behavior controls how often a workflow instance is persisted during workflow execution.', 'workflowContextFidelity')}
-          {checkBox(formContext, 'isSingleton', 'Singleton', workflowDefinition.isSingleton, 'Singleton workflows will only have one active instance executing at a time.')}
+          {/* {textInput(formContext, 'tag', 'Tag', workflowDefinition.tag, 'Tags can be used to query workflow definitions with.', 'tag')} */}
+          {/* {selectField(formContext, 'persistenceBehavior', 'Persistence Behavior', workflowDefinition.persistenceBehavior, persistenceBehaviorOptions, 'The persistence behavior controls how often a workflow instance is persisted during workflow execution.', 'workflowContextFidelity')} */}
+          {/* {checkBox(formContext, 'isSingleton', 'Singleton', workflowDefinition.isSingleton, 'Singleton workflows will only have one active instance executing at a time.')} */}
         </div>
       </div>
     );
