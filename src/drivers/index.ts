@@ -6,4 +6,5 @@ export * from './multi-text-driver';
 export * from './multiline-driver';
 export * from './null-property-driver';
 export * from './single-line-driver';
+export * from './timepicker-driver';
 export * from './switch-case-builder-driver';

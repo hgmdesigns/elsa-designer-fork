@@ -1,6 +1,6 @@
 ﻿import {ElsaPlugin} from "../services/elsa-plugin";
 import {propertyDisplayManager} from '../services/property-display-manager';
-import {CheckboxDriver, CheckListDriver, CodeEditorDriver, DropdownDriver, MultilineDriver, MultiTextDriver, SingleLineDriver, SwitchCaseBuilderDriver} from "../drivers";
+import {CheckboxDriver, CheckListDriver, CodeEditorDriver, DropdownDriver, MultilineDriver, MultiTextDriver, SingleLineDriver, SwitchCaseBuilderDriver, TimepickerDriver} from "../drivers";
 import {PropertyDisplayDriver} from "../services/property-display-driver";
 import {RadioListDriver} from "../drivers/radio-list-driver";
 
@@ -15,6 +15,7 @@ export class DefaultDriversPlugin implements ElsaPlugin {
         this.addDriver('multi-text', MultiTextDriver);
         this.addDriver('code-editor', CodeEditorDriver);
         this.addDriver('switch-case-builder', SwitchCaseBuilderDriver);
+        this.addDriver('timepicker', TimepickerDriver);
     }
 
     addDriver<T extends PropertyDisplayDriver>(controlType: string, c: new () => T) {

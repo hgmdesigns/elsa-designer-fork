@@ -194,6 +194,10 @@ export namespace Components {
         "propertyDescriptor": ActivityPropertyDescriptor;
         "propertyModel": ActivityDefinitionProperty;
     }
+    interface ElsaTimepickerProperty {
+        "propertyDescriptor": ActivityPropertyDescriptor;
+        "propertyModel": ActivityDefinitionProperty;
+    }
     interface ElsaToastNotification {
         "hide": () => Promise<void>;
         "show": (options: ToastNotificationOptions) => Promise<void>;
@@ -462,6 +466,12 @@ declare global {
         prototype: HTMLElsaSwitchCasesPropertyElement;
         new (): HTMLElsaSwitchCasesPropertyElement;
     };
+    interface HTMLElsaTimepickerPropertyElement extends Components.ElsaTimepickerProperty, HTMLStencilElement {
+    }
+    var HTMLElsaTimepickerPropertyElement: {
+        prototype: HTMLElsaTimepickerPropertyElement;
+        new (): HTMLElsaTimepickerPropertyElement;
+    };
     interface HTMLElsaToastNotificationElement extends Components.ElsaToastNotification, HTMLStencilElement {
     }
     var HTMLElsaToastNotificationElement: {
@@ -580,6 +590,7 @@ declare global {
         "elsa-studio-workflow-instances-view": HTMLElsaStudioWorkflowInstancesViewElement;
         "elsa-studio-workflow-registry": HTMLElsaStudioWorkflowRegistryElement;
         "elsa-switch-cases-property": HTMLElsaSwitchCasesPropertyElement;
+        "elsa-timepicker-property": HTMLElsaTimepickerPropertyElement;
         "elsa-toast-notification": HTMLElsaToastNotificationElement;
         "elsa-webhook-definition-editor-notifications": HTMLElsaWebhookDefinitionEditorNotificationsElement;
         "elsa-webhook-definition-editor-screen": HTMLElsaWebhookDefinitionEditorScreenElement;
@@ -779,6 +790,10 @@ declare namespace LocalJSX {
         "propertyDescriptor"?: ActivityPropertyDescriptor;
         "propertyModel"?: ActivityDefinitionProperty;
     }
+    interface ElsaTimepickerProperty {
+        "propertyDescriptor"?: ActivityPropertyDescriptor;
+        "propertyModel"?: ActivityDefinitionProperty;
+    }
     interface ElsaToastNotification {
     }
     interface ElsaWebhookDefinitionEditorNotifications {
@@ -874,6 +889,7 @@ declare namespace LocalJSX {
         "elsa-studio-workflow-instances-view": ElsaStudioWorkflowInstancesView;
         "elsa-studio-workflow-registry": ElsaStudioWorkflowRegistry;
         "elsa-switch-cases-property": ElsaSwitchCasesProperty;
+        "elsa-timepicker-property": ElsaTimepickerProperty;
         "elsa-toast-notification": ElsaToastNotification;
         "elsa-webhook-definition-editor-notifications": ElsaWebhookDefinitionEditorNotifications;
         "elsa-webhook-definition-editor-screen": ElsaWebhookDefinitionEditorScreen;
@@ -927,6 +943,7 @@ declare module "@stencil/core" {
             "elsa-studio-workflow-instances-view": LocalJSX.ElsaStudioWorkflowInstancesView & JSXBase.HTMLAttributes<HTMLElsaStudioWorkflowInstancesViewElement>;
             "elsa-studio-workflow-registry": LocalJSX.ElsaStudioWorkflowRegistry & JSXBase.HTMLAttributes<HTMLElsaStudioWorkflowRegistryElement>;
             "elsa-switch-cases-property": LocalJSX.ElsaSwitchCasesProperty & JSXBase.HTMLAttributes<HTMLElsaSwitchCasesPropertyElement>;
+            "elsa-timepicker-property": LocalJSX.ElsaTimepickerProperty & JSXBase.HTMLAttributes<HTMLElsaTimepickerPropertyElement>;
             "elsa-toast-notification": LocalJSX.ElsaToastNotification & JSXBase.HTMLAttributes<HTMLElsaToastNotificationElement>;
             "elsa-webhook-definition-editor-notifications": LocalJSX.ElsaWebhookDefinitionEditorNotifications & JSXBase.HTMLAttributes<HTMLElsaWebhookDefinitionEditorNotificationsElement>;
             "elsa-webhook-definition-editor-screen": LocalJSX.ElsaWebhookDefinitionEditorScreen & JSXBase.HTMLAttributes<HTMLElsaWebhookDefinitionEditorScreenElement>;
