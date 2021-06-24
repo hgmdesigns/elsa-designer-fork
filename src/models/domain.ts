@@ -41,8 +41,11 @@ export interface ActivityBlueprint {
   name?: string;
   displayName?: string;
   description?: string;
+  activityType: string;
   type: string;
   subType: string;
+  event?: string;
+  action?: string;
   parentId?: string;
   persistWorkflow: boolean;
   loadWorkflowContext: boolean;
@@ -133,8 +136,11 @@ export interface WorkflowInstanceSummary {
 
 export interface ActivityDefinition {
   activityId: string;
+  activityType: string;
   type: string;
   subType: string;
+  event?: string;
+  action?: string;
   name: string;
   displayName: string;
   description: string;
@@ -254,8 +260,11 @@ export interface WorkflowFault {
 }
 
 export interface ActivityDescriptor {
+  activityType: string;
   type: string;
   subType: string;
+  event?: string;
+  action?: string;
   displayName: string;
   description?: string;
   category: string;

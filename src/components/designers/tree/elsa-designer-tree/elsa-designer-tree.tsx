@@ -232,8 +232,11 @@ export class ElsaWorkflowDesigner {
   newActivity(activityDescriptor: ActivityDescriptor): ActivityModel {
     const activity: ActivityModel = {
       activityId: uuid(),
+      activityType: activityDescriptor.activityType,
       type: activityDescriptor.type,
       subType: activityDescriptor.subType,
+      action: activityDescriptor.action,
+      event: activityDescriptor.event,
       outcomes: activityDescriptor.outcomes,
       displayName: activityDescriptor.displayName,
       properties: [],

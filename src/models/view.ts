@@ -10,8 +10,11 @@ export interface WorkflowModel {
 export interface ActivityModel {
   activityId: string;
   type: string;
+  activityType: string;
   subType: string;
   name?: string;
+  action?: string;
+  event?: string;
   displayName?: string;
   description?: string;
   outcomes: Array<string>;

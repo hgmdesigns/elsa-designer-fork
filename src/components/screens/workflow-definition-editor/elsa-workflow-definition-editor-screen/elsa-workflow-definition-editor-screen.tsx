@@ -8,6 +8,7 @@ import Tunnel, {WorkflowEditorState} from '../../../../data/workflow-editor';
 import {downloadFromBlob} from "../../../../utils/download";
 import {ActivityContextMenuState, WorkflowDesignerMode} from "../../../designers/tree/elsa-designer-tree/models";
 import {registerClickOutside} from "stencil-click-outside";
+import { sort } from 'd3';
 
 @Component({
   tag: 'elsa-workflow-definition-editor-screen',
@@ -203,8 +204,11 @@ export class ElsaWorkflowDefinitionEditorScreen {
       variables: workflowDefinition.variables,
       activities: workflowModel.activities.map<ActivityDefinition>(x => ({
         activityId: x.activityId,
+        activityType: x.activityType,
         type: x.type,
         subType: x.subType,
+        action: x.action,
+        event: x.event,
         name: x.name,
         displayName: x.displayName,
         description: x.description,
@@ -281,8 +285,11 @@ export class ElsaWorkflowDefinitionEditorScreen {
       description: source.description,
       displayName: source.displayName,
       name: source.name,
+      activityType: source.activityType,
       type: source.type,
       subType: source.type,
+      action: source.action,
+      event: source.event,
       properties: source.properties,
       outcomes: [...activityDescriptor.outcomes],
       persistWorkflow: source.persistWorkflow,

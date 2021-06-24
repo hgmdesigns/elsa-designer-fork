@@ -53,8 +53,11 @@ export class ElsaWorkflowBlueprintViewerScreen {
       isSingleton: false,
       saveWorkflowContext: false,
       variables: {data: {}},
+      activityType: null,
       type: null,
       subType: null,
+      action: null,
+      event: null,
       properties: {data: {}},
       propertyStorageProviders: {}
     };
@@ -124,8 +127,11 @@ export class ElsaWorkflowBlueprintViewerScreen {
       description: source.description,
       displayName: source.displayName || source.name || source.type,
       name: source.name,
+      activityType: source.activityType,
       type: source.type,
       subType: source.subType,
+      action: source.action,
+      event: source.event,
       properties: properties,
       outcomes: [...activityDescriptor.outcomes],
       persistWorkflow: source.persistWorkflow,

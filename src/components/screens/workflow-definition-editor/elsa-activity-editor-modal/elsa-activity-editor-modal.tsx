@@ -64,7 +64,7 @@ export class ElsaActivityEditorModal {
   }
 
   componentWillRender() {
-    const activityDescriptor: ActivityDescriptor = this.activityDescriptor || {displayName: '', type: '', subType: '', outcomes: [], category: '', traits: 0, browsable: false, inputProperties: [], outputProperties: [], description: ''};
+    const activityDescriptor: ActivityDescriptor = this.activityDescriptor || {displayName: '', activityType: '',  type: '', subType: '', action: '', event: '', outcomes: [], category: '', traits: 0, browsable: false, inputProperties: [], outputProperties: [], description: ''};
     const propertyCategories = activityDescriptor.inputProperties.filter(x => x.category).map(x => x.category).distinct();
     const defaultProperties = activityDescriptor.inputProperties.filter(x => !x.category || x.category.length == 0);
     let tabs: Array<string> = [];
@@ -82,7 +82,7 @@ export class ElsaActivityEditorModal {
     if (tabs.findIndex(x => x === selectedTab) < 0)
       selectedTab = tabs[0];
 
-    const activityModel: ActivityModel = this.activityModel || {type: '', subType: '' ,activityId: '', outcomes: [], properties: [], propertyStorageProviders: {}};
+    const activityModel: ActivityModel = this.activityModel || {activityType: '' , type: '', subType: '' , activityId: '', action: '', event: '',  outcomes: [], properties: [], propertyStorageProviders: {}};
 
     this.renderProps = {
       activityDescriptor,
