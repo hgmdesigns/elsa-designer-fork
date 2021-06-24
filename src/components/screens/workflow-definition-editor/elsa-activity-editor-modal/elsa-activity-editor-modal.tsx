@@ -74,8 +74,8 @@ export class ElsaActivityEditorModal {
     }
 
     tabs = [...tabs, ...propertyCategories];
-    tabs.push('Common');
-    tabs.push('Storage');
+    // tabs.push('Common');
+    // tabs.push('Storage');
 
     let selectedTab = this.selectedTab;
 
@@ -163,8 +163,8 @@ export class ElsaActivityEditorModal {
 
   renderSelectedTab(activityModel: ActivityModel, activityDescriptor: ActivityDescriptor, categories: Array<string>) {
     return [
-      this.renderStorageTab(activityModel, activityDescriptor),
-      this.renderCommonTab(activityModel),
+      // this.renderStorageTab(activityModel, activityDescriptor),
+      // this.renderCommonTab(activityModel),
       this.renderPropertiesTab(activityModel, activityDescriptor),
       this.renderCategoryTabs(activityModel, activityDescriptor, categories),
     ];
