@@ -1,7 +1,7 @@
 {
-  "name": "@elsa-workflows/elsa-workflows-studio",
+  "name": "@hassangm/workflow-designer",
   "version": "2.0.1",
-  "description": "Elsa Workflow Studio is a collection of web components to manage Elsa workflows stored on an Elsa Workflows server.",
+  "description": "A modified fork of sfmskywalker's Elsa Workflow Studio.",
   "main": "dist/index.cjs.js",
   "module": "dist/custom-elements/index.js",
   "es2015": "dist/esm/index.mjs",
