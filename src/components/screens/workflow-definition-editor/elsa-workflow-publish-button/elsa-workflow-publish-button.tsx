@@ -114,7 +114,7 @@ export class ElsaWorkflowPublishButton {
               onClick={() => this.onPublishClick()}
               class="elsa-relative elsa-inline-flex elsa-items-center elsa-px-4 elsa-py-2 elsa-rounded-l-md elsa-border elsa-border-gray-300 elsa-bg-white elsa-text-sm elsa-font-medium elsa-text-gray-700 hover:elsa-bg-gray-50 focus:elsa-z-10 focus:elsa-outline-none focus:elsa-ring-1 focus:elsa-ring-blue-500 focus:elsa-border-blue-500">
 
-        Publish
+        Activate
       </button>);
   }
 
@@ -128,7 +128,7 @@ export class ElsaWorkflowPublishButton {
           <circle class="elsa-opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
           <path class="elsa-opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/>
         </svg>
-        Publishing
+        Activating
       </button>);
   }
 
@@ -139,7 +139,7 @@ export class ElsaWorkflowPublishButton {
     return (
       <div class="elsa-py-1" role="none">
         <a href="#" onClick={e => this.onUnPublishClick(e)} class="elsa-block elsa-px-4 elsa-py-2 elsa-text-sm elsa-text-gray-700 hover:elsa-bg-gray-100 hover:elsa-text-gray-900" role="menuitem">
-          Unpublish
+          Deactivate
         </a>
       </div>
     );

@@ -585,21 +585,36 @@ export class ElsaWorkflowDesigner {
   }
 
   renderActivityBody(displayContext: ActivityDesignDisplayContext) {
+    const activityPropertiesContent: Array<string> = [];
+    displayContext.activityModel.properties.forEach(property => {
+        activityPropertiesContent.push(this.renderActivityProperties(property))
+    })
+    return `<div class="elsa-border-t elsa-border-t-solid">
+    <div class="elsa-p-6 elsa-text-gray-400 elsa-text-sm">
+      <div class="elsa-mb-2">${!!displayContext.bodyDisplay ? displayContext.bodyDisplay : ''}</div>
+      ${activityPropertiesContent.join('<br>')}
+    </div>
+</div>`;
+  }
+
+  renderActivityProperties(property: any) {
     return (
-      `<div class="elsa-border-t elsa-border-t-solid">
-          <div class="elsa-p-6 elsa-text-gray-400 elsa-text-sm">
-            <div class="elsa-mb-2">${!!displayContext.bodyDisplay ? displayContext.bodyDisplay : ''}</div>
-            <div>
-              <span class="elsa-inline-flex elsa-items-center elsa-px-2.5 elsa-py-0.5 elsa-rounded-full elsa-text-xs elsa-font-medium elsa-bg-gray-100 elsa-text-gray-500">
-                <svg class="-elsa-ml-0.5 elsa-mr-1.5 elsa-h-2 elsa-w-2 elsa-text-gray-400" fill="currentColor" viewBox="0 0 8 8">
-                  <circle cx="4" cy="4" r="3" />
-                </svg>
-                ${displayContext.activityModel.activityId}
-              </span>
-            </div>
-          </div>
-      </div>`
-    );
+      `
+      <div>
+      <span class="elsa-inline-flex elsa-items-center elsa-px-2.5 elsa-py-0.5 elsa-rounded-full elsa-text-xs elsa-font-medium elsa-bg-gray-100 elsa-text-gray-500">
+        <svg class="-elsa-ml-0.5 elsa-mr-1.5 elsa-h-2 elsa-w-2 elsa-text-gray-400" fill="currentColor" viewBox="0 0 8 8">
+          <circle cx="4" cy="4" r="3" />
+        </svg>
+        <div class="elsa-inline-flex">
+        <b>${property.name}  </b>
+        <p>${property.expressions.Literal}</p>
+        </div><br>
+       
+      </span>
+    </div>
+    
+      `
+    )
   }
 
   render() {
