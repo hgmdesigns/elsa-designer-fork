@@ -606,7 +606,7 @@ export class ElsaWorkflowDesigner {
           <circle cx="4" cy="4" r="3" />
         </svg>
         <div class="elsa-inline-flex">
-        <b>${property.name}  </b>
+        <b class="elsa-mr-1.5">${property.name}:</b>
         <p>${property.expressions.Literal}</p>
         </div><br>
        

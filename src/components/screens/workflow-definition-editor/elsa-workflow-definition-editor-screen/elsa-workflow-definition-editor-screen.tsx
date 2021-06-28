@@ -480,7 +480,7 @@ export class ElsaWorkflowDefinitionEditorScreen {
       return undefined;
 
     const message =
-      this.unPublishing ? 'Unpublishing...' : this.unPublished ? 'Unpublished'
+      this.unPublishing ? 'Deactivating...' : this.unPublished ? 'Deactivated'
         : this.saving ? 'Saving...' : this.saved ? 'Saved'
           : this.importing ? 'Importing...' : this.imported ? 'Imported'
             : null;

@@ -43,7 +43,7 @@ export const createElsaClient = function (serverUrl: string): ElsaClient {
         return response.data;
       },
       save: async request => {
-        const response = await httpClient.post<WorkflowDefinition>('v1/workflow-definitions', request);
+        const response = await httpClient.patch<WorkflowDefinition>(`v1/workflow-definitions/${request.workflowDefinitionId}`, request);
         return response.data;
       },
       delete: async definitionId => {
