@@ -1,0 +1,38 @@
+import { ActivityBlueprint, ActivityModel, Connection, ConnectionModel, WorkflowBlueprint, WorkflowExecutionLogRecord, WorkflowInstance, WorkflowModel } from "../../../../models";
+import { ActivityStats } from "../../../../services/elsa-client";
+import { ActivityContextMenuState } from "../../../designers/tree/elsa-designer-tree/models";
+export declare class ElsaWorkflowInstanceViewerScreen {
+  constructor();
+  workflowInstanceId: string;
+  serverUrl: string;
+  workflowInstance: WorkflowInstance;
+  workflowBlueprint: WorkflowBlueprint;
+  workflowModel: WorkflowModel;
+  selectedActivityId?: string;
+  activityStats?: ActivityStats;
+  activityContextMenuState: ActivityContextMenuState;
+  el: HTMLElement;
+  designer: HTMLElsaDesignerTreeElement;
+  journal: HTMLElsaWorkflowInstanceJournalElement;
+  getServerUrl(): Promise<string>;
+  workflowInstanceIdChangedHandler(newValue: string): Promise<void>;
+  serverUrlChangedHandler(newValue: string): Promise<void>;
+  componentWillLoad(): Promise<void>;
+  componentDidLoad(): void;
+  loadActivityDescriptors(): Promise<void>;
+  updateModels(workflowInstance: WorkflowInstance, workflowBlueprint: WorkflowBlueprint): void;
+  mapWorkflowModel(workflowBlueprint: WorkflowBlueprint): WorkflowModel;
+  mapActivityModel(source: ActivityBlueprint): ActivityModel;
+  mapConnectionModel(connection: Connection): ConnectionModel;
+  handleContextMenuChange(x: number, y: number, shown: boolean, activity: ActivityModel): void;
+  onShowWorkflowSettingsClick(): void;
+  onRecordSelected(e: CustomEvent<WorkflowExecutionLogRecord>): void;
+  onActivitySelected(e: CustomEvent<ActivityModel>): Promise<void>;
+  onActivityDeselected(e: CustomEvent<ActivityModel>): Promise<void>;
+  onActivityContextMenuButtonClicked(e: CustomEvent<ActivityContextMenuState>): Promise<void>;
+  render(): any;
+  getActivityBorderColor: (activity: ActivityModel) => string;
+  renderActivityStatsButton: (activity: ActivityModel) => string;
+  renderCanvas(): any;
+  renderActivityPerformanceMenu: () => any;
+}

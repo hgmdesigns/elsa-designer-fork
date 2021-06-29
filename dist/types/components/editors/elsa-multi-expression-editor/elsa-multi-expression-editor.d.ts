@@ -1,0 +1,34 @@
+import { EventEmitter } from '../../../stencil-public-runtime';
+import { Map } from "../../../utils/utils";
+export declare class ElsaMultiExpressionEditor {
+  label: string;
+  fieldName?: string;
+  syntax?: string;
+  defaultSyntax: string;
+  expressions: Map<string>;
+  supportedSyntaxes: Array<string>;
+  isDisabled?: boolean;
+  editorHeight: string;
+  singleLineMode: boolean;
+  context?: string;
+  syntaxChanged: EventEmitter<string>;
+  expressionChanged: EventEmitter<string>;
+  selectedSyntax?: string;
+  currentValue?: string;
+  contextMenu: HTMLElement;
+  expressionEditor: HTMLElsaExpressionEditorElement;
+  defaultSyntaxValue: string;
+  componentWillLoad(): Promise<void>;
+  toggleContextMenu(): void;
+  openContextMenu(): void;
+  closeContextMenu(): void;
+  selectDefaultEditor(e: Event): void;
+  selectSyntax(e: Event, syntax: string): Promise<void>;
+  onSettingsClick(e: Event): void;
+  onExpressionChanged(e: CustomEvent<string>): void;
+  render(): any;
+  renderLabel(): any;
+  renderContextMenuWidget(): any;
+  renderContextMenuButton(): any;
+  renderEditor(): any;
+}
