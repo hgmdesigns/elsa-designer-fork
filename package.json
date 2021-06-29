@@ -1,7 +1,7 @@
 {
-  "name": "@elsa-workflows/elsa-workflows-studio",
-  "version": "2.0.2",
-  "description": "Elsa Workflow Studio is a collection of web components to manage Elsa workflows stored on an Elsa Workflows server.",
+  "name": "elsa-workflow-designer-mat",
+  "version": "0.0.1",
+  "description": "A fork of Esla Workflow designer.",
   "main": "dist/index.cjs.js",
   "module": "dist/custom-elements/index.js",
   "es2015": "dist/esm/index.mjs",
@@ -9,7 +9,7 @@
   "types": "dist/custom-elements/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/elsa-workflows-studio/elsa-workflows-studio.esm.js",
+  "unpkg": "dist/elsa-workflow-designer-mat/elsa-workflow-designer-mat.esm.js",
   "files": [
     "dist/",
     "loader/"
@@ -26,7 +26,7 @@
     "generate": "stencil generate",
     "build:tailwind:dev": "cross-env NODE_ENV=development tailwind build ./tailwind.css -o ./src/globals/tailwind.css & copyfiles -u 2 \"./src/globals/tailwind.css\" \"./src/assets/styles\"",
     "build:tailwind:prod": "cross-env NODE_ENV=production tailwind build ./tailwind.css -o ./src/globals/tailwind.css & copyfiles -u 2 \"./src/globals/tailwind.css\" \"./src/assets/styles\"",
-    "prepublish": "tsc"
+    "prepublish": "npm run build:tailwind:prod & stencil build"
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^4.0.3",
