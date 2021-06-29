@@ -18,7 +18,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
 });
 
 export const config: Config = {
-  namespace: 'elsa-workflows-studio',
+  namespace: 'elsa-workflow-designer-mat',
   outputTargets: [
     {
       type: 'dist',
