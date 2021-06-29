@@ -35,6 +35,7 @@
  - [elsa-multi-text-property](../properties/elsa-multi-text-property)
  - [elsa-radio-list-property](../properties/elsa-radio-list-property)
  - [elsa-single-line-property](../properties/elsa-single-line-property)
+ - [elsa-timepicker-property](../properties/elsa-timepicker-property)
 
 ### Depends on
 
@@ -54,6 +55,7 @@ graph TD;
   elsa-multi-text-property --> elsa-property-editor
   elsa-radio-list-property --> elsa-property-editor
   elsa-single-line-property --> elsa-property-editor
+  elsa-timepicker-property --> elsa-property-editor
   style elsa-property-editor fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
