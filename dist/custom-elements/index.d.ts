@@ -1,4 +1,4 @@
-/* ElsaWorkflowsStudio custom elements bundle */
+/* ElsaWorkflowDesignerMat custom elements bundle */
 
 import type { Components, JSX } from "../types/components";
 

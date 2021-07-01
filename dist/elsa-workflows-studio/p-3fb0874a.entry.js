@@ -1,1 +1,0 @@
-import{r as s,h as r}from"./p-94a66dfc.js";const e=class{constructor(r){s(this,r)}componentWillLoad(){this.id=this.match.params.id}render(){return r("div",null,r("elsa-workflow-instance-viewer-screen",{"server-url":this.serverUrl,workflowInstanceId:this.id}))}};export{e as elsa_studio_workflow_instances_view}

@@ -287,7 +287,7 @@ export class ElsaWorkflowDefinitionEditorScreen {
       name: source.name,
       activityType: source.activityType,
       type: source.type,
-      subType: source.type,
+      subType: source.subType,
       action: source.action,
       event: source.event,
       properties: source.properties,
