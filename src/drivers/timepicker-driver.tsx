@@ -7,7 +7,7 @@ export class TimepickerDriver implements PropertyDisplayDriver {
 
   display(activity: ActivityModel, property: ActivityPropertyDescriptor) {
     const prop = getOrCreateProperty(activity, property.name);
-    // return <elsa-timepicker-property propertyDescriptor={property} propertyModel={prop}/>;
+    return <elsa-timepicker-property propertyDescriptor={property} propertyModel={prop}/>;
   }
 
   update(activity: ActivityModel, property: ActivityPropertyDescriptor, form: FormData) {
