@@ -150,7 +150,7 @@ export class ElsaWorkflowDefinitionEditorScreen {
 
   async loadActivityDescriptors() {
     const client = createElsaClient(this.serverUrl);
-    state.activityDescriptors = await client.activitiesApi.list();
+    state.activityDescriptors = await client.activitiesApi.list(this.workflowDefinitionId);
   }
 
   async loadWorkflowStorageDescriptors() {

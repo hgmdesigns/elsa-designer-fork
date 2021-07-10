@@ -22,7 +22,7 @@ export declare class ElsaWorkflowInstanceListScreen {
   createClient(): import("../../../../services/elsa-client").ElsaClient;
   getLatestWorkflowBlueprintVersions(): Array<WorkflowBlueprintSummary>;
   buildFilterUrl(workflowId?: string, workflowStatus?: WorkflowStatus, orderBy?: OrderBy): string;
-  getStatusColor(status: WorkflowStatus): "rose" | "gray" | "blue" | "yellow" | "green" | "red";
+  getStatusColor(status: WorkflowStatus): "red" | "green" | "blue" | "rose" | "yellow" | "gray";
   updateSelectAllChecked(): void;
   routeChanged(e: LocationSegments): Promise<void>;
   onSelectAllCheckChange(e: Event): void;

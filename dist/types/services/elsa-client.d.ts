@@ -14,7 +14,7 @@ export interface ElsaClient {
   webhookDefinitionsApi: WebhookDefinitionsApi;
 }
 export interface ActivitiesApi {
-  list(): Promise<Array<ActivityDescriptor>>;
+  list(workflowDefinitionId: string): Promise<Array<ActivityDescriptor>>;
 }
 export interface WorkflowDefinitionsApi {
   list(page?: number, pageSize?: number, versionOptions?: VersionOptions): Promise<PagedList<WorkflowDefinitionSummary>>;

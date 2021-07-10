@@ -26,8 +26,8 @@ export const createElsaClient = function (serverUrl: string): ElsaClient {
 
   return {
     activitiesApi: {      
-      list: async () => {
-        const response = await httpClient.get<Array<ActivityDescriptor>>('v1/activities');
+      list: async  (workflowDefinitionId?: string) => { 
+        const response = await httpClient.get<Array<ActivityDescriptor>>(`v1/activities/${workflowDefinitionId}`);
         return response.data;
       }      
     },
@@ -214,7 +214,7 @@ export interface ElsaClient {
 }
 
 export interface ActivitiesApi {
-  list(): Promise<Array<ActivityDescriptor>>;
+  list(workflowDefinitionId: string): Promise<Array<ActivityDescriptor>>;
 }
 
 export interface WorkflowDefinitionsApi {

@@ -14,7 +14,7 @@ export class ElsaTimepickerProperty {
   onChange(e: Event) {
     const input = e.currentTarget as HTMLInputElement;
     const defaultSyntax = this.propertyDescriptor.defaultSyntax || SyntaxNames.Literal;
-    this.propertyModel.expressions[defaultSyntax] = this.currentValue = (input.firstElementChild as HTMLInputElement).value;
+    this.propertyModel.expressions[defaultSyntax] = this.currentValue = (input.firstElementChild as HTMLInputElement).value;  
   }
 
   componentWillLoad() {    
